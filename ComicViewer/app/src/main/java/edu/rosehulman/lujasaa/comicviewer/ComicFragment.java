@@ -89,7 +89,7 @@ public class ComicFragment extends Fragment{
         if(getArguments() != null){
             mComicWrapper = getArguments().getParcelable(ARG_COMIC_WRAPPER);
             //below is the link to publicly hosted xckd comics
-            String urlString = String.format("http://xckd.com/%d/info.0.json", mComicWrapper.getXkcdIssue());
+            String urlString = String.format("https://xckd.com/%d/info.0.json", mComicWrapper.getXkcdIssue());
             new GetComicTask(this).execute(urlString);
         }
     }
